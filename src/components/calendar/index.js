@@ -11,7 +11,7 @@ export default class Calendar extends React.Component {
     dateObject: moment(),
     allmonths: moment.months(),
     showYearNav: false,
-    selectedDay: null
+    selectedDay: new Date().getDate()
   };
   daysInMonth = () => {
     return this.state.dateObject.daysInMonth();
@@ -252,6 +252,11 @@ export default class Calendar extends React.Component {
 
     return (
       <div className="tail-datetime-calendar">
+		<div>
+			<label>
+				Selected : {this.state.selectedDay} / {this.month()} / {this.year()}
+			</label>
+		</div>
         <div className="calendar-navi">
           <span
             onClick={e => {
@@ -266,7 +271,7 @@ export default class Calendar extends React.Component {
               }}
               class="calendar-label"
             >
-              {this.month()},
+              {this.month()}
             </span>
           )}
           <span
