@@ -1,7 +1,7 @@
 {
   "name": "react-calendar",
   "version": "1.0.0",
-  "description": "create simple calendar compent on react",
+  "description": "create simple calendar component on react this will use for showing calendar onto the webpage",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
